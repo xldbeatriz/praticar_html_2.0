@@ -33,6 +33,27 @@ tabs.forEach(tab => {
     document.getElementById(tab.dataset.tab).classList.add("active");
   });
 });
+// Permitir Tab para indentação nos editores
+document.querySelectorAll("textarea.code").forEach(area => {
+  area.addEventListener("keydown", function(e) {
+    if (e.key === "Tab") {
+      e.preventDefault();
+
+      const start = this.selectionStart;
+      const end = this.selectionEnd;
+
+      // Adiciona 2 espaços (pode trocar por "\t" se quiser tab real)
+      const indent = "  ";
+
+      this.value =
+        this.value.substring(0, start) + indent + this.value.substring(end);
+
+      // Reposiciona o cursor depois da indentação
+      this.selectionStart = this.selectionEnd = start + indent.length;
+    }
+  });
+});
 
 // Render inicial
 updatePreview();
+
