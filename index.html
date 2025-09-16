@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playground VS Code</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>⚡ Playground VS Code Style</h1>
+  </header>
+
+  <main>
+    <!-- Área de edição estilo VS Code -->
+    <section class="editor">
+      <div class="tabs">
+        <button class="tab active" data-tab="html">index.html</button>
+        <button class="tab" data-tab="css">style.css</button>
+        <button class="tab" data-tab="js">script.js</button>
+      </div>
+
+      <div class="editor-area">
+        <textarea id="html" class="code active" spellcheck="false">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste</title>
+</head>
+<body>
+  <h1>Olá, mundo!</h1>
+  <p>Esse é o conteúdo da minha página.</p>
+</body>
+</html>
+        </textarea>
+
+        <textarea id="css" class="code" spellcheck="false">
+h1 {
+  color: cyan;
+  text-align: center;
+}
+p {
+  color: lime;
+  font-size: 18px;
+  text-align: center;
+}
+        </textarea>
+
+        <textarea id="js" class="code" spellcheck="false">
+// Exemplo simples
+console.log("JS funcionando!");
+        </textarea>
+      </div>
+    </section>
+
+    <!-- Área do preview estilo CMD/console -->
+    <section class="preview">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <p>Preview / Navegador</p>
+      </div>
+      <iframe id="preview"></iframe>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
