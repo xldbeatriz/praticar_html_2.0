@@ -43,8 +43,8 @@ document.querySelectorAll("textarea.code").forEach(area => {
       const end = this.selectionEnd;
 
       // Adiciona 2 espaços (pode trocar por "\t" se quiser tab real)
-      const indent = "  ";
-
+      const indent = "\t";
+      
       this.value =
         this.value.substring(0, start) + indent + this.value.substring(end);
 
@@ -56,4 +56,5 @@ document.querySelectorAll("textarea.code").forEach(area => {
 
 // Render inicial
 updatePreview();
+
 
